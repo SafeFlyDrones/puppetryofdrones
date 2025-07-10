@@ -1,0 +1,70 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Category3-Restricted-Area-Policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+    <Target />
+
+    <!-- Deny if area is controlled -->
+    <Rule RuleId="AreaControlled-Deny" Effect="Deny">
+        <Description>Deny if the area is controlled.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:area-controlled"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="false" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">controlled</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Permit if individuals are informed -->
+    <Rule RuleId="IndividualsInformed-Permit" Effect="Permit">
+        <Description>Permit if individuals are informed of the risks.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:individuals-informed"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="false" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">informed</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Deny if area is not controlled -->
+    <Rule RuleId="AreaNotControlled-Deny" Effect="Permit">
+        <Description>Deny if the area is not controlled.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:area-controlled"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="false" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">not-controlled</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Deny if individuals are not informed -->
+    <Rule RuleId="IndividualsNotInformed-Deny" Effect="Deny">
+        <Description>Deny if individuals are not informed of the risks.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:individuals-informed"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="false" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">not-informed</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+</Policy>

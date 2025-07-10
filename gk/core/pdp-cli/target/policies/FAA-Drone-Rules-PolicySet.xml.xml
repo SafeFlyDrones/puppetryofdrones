@@ -1,0 +1,20 @@
+<PolicySet xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+           PolicySetId="FAA-Drone-Rules-PolicySet"
+           PolicyCombiningAlgId="urn:oasis:names:tc:xacml:3.0:policy-combining-algorithm:deny-overrides"
+           Version="1.0">
+    <Target />
+    <!-- Reference to Category1-Weight-Limit -->
+    <PolicyIdReference>Category1-Weight-Limit-Policy</PolicyIdReference>
+    <!-- Reference to Category1-No-Exposed-Parts -->
+    <PolicyIdReference>Category1-No-Exposed-Parts-Policy</PolicyIdReference>
+    <!-- Reference to Category2-Kinetic-Energy-Limit -->
+    <PolicyIdReference>Category2-Kinetic-Energy-Limit-Policy</PolicyIdReference>
+    <!-- Reference to Remote-ID -->
+    <PolicyIdReference>Remote-ID-Policy</PolicyIdReference>
+    <!-- Reference to Restricted area -->
+    <PolicyIdReference>Category3-Restricted-Area-Policy</PolicyIdReference>
+    <!-- Reference to new policy -->
+    <PolicyIdReference>Commercial-BVLOS-Certification-Policy</PolicyIdReference>
+    
+    
+</PolicySet>

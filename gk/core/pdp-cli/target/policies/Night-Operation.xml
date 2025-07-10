@@ -1,0 +1,121 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Night-Operation-Policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+    <Target />
+    
+    <!-- Rule to permit operation if time is between 06:00 and 18:00 -->
+    <Rule RuleId="Daytime-Operation-Permit" Effect="Permit">
+        <Description>Permit operation if time is between 06:00 and 18:00</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                             DataType="http://www.w3.org/2001/XMLSchema#time"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">06:00:00</AttributeValue>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                             DataType="http://www.w3.org/2001/XMLSchema#time"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Rule to evaluate night operation conditions -->
+    <Rule RuleId="Night-Operation-Evaluation" Effect="Permit">
+        <Description>Evaluate night operation conditions between 18:00 and 06:00</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <!-- Check if time is between 18:00 and 06:00 -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                                 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#time"
+                                                 MustBePresent="true" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+                    </Apply>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                                 Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                                 DataType="http://www.w3.org/2001/XMLSchema#time"
+                                                 MustBePresent="true" />
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">06:00:00</AttributeValue>
+                    </Apply>
+                </Apply>
+                <!-- Evaluate all six rules -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Night-Operation-Knowledge-Requirement"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Night-Operation-Lighting-Requirement"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Civil-Twilight-Operation-Lighting"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Civil-Twilight-Time-Definition"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Lighting-Safety-Adjustment"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="Certificate-Waiver-Expiration"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Default deny rule -->
+    <Rule RuleId="Night-Operation-Policy:Deny-Default" Effect="Deny" />
+</Policy>

@@ -1,0 +1,64 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Commercial-BVLOS-Certification-Policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+    <Target />
+    
+    <!-- Deny if operation is commercial and BVLOS certification is not approved -->
+    <Rule RuleId="BVLOS-Deny" Effect="Deny">
+        <Description>Deny operations if the operation is commercial and BVLOS certification is not approved.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <!-- Check if commercial-purpose is "yes" -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:commercial-purpose"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">yes</AttributeValue>
+                </Apply>
+                <!-- Check if bvlos-certification is "not-approved" -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:bvlos-certification"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">not-approved</AttributeValue>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Permit if operation is commercial and BVLOS certification is approved -->
+    <Rule RuleId="BVLOS-Permit" Effect="Permit">
+        <Description>Permit operations if the operation is commercial and BVLOS certification is approved.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <!-- Check if commercial-purpose is "yes" -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:commercial-purpose"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">yes</AttributeValue>
+                </Apply>
+                <!-- Check if bvlos-certification is "approved" -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:bvlos-certification"
+                                             Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                             DataType="http://www.w3.org/2001/XMLSchema#string"
+                                             MustBePresent="true" />
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">approved</AttributeValue>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+</Policy>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1741756093851">
+    <module artifactId="authzforce-ce-core-pdp-cli" groupId="org.ow2.authzforce" version="21.0.2-SNAPSHOT"/>
+    <files>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\cli\PdpCommandLineCallable.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\cli\test\CliTest.java" result="NOOP"/>
+    </files>
+</licensePluginReport>

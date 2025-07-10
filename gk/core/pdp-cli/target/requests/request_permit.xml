@@ -1,0 +1,13 @@
+<Request xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+         ReturnPolicyIdList="false"
+         CombinedDecision="false">
+
+    <!-- Environment Attributes -->
+    <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment">
+        <!-- Current Time -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                   IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">10:00:00</AttributeValue>
+        </Attribute>
+    </Attributes>
+</Request>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="example-policy"
+        Version="1.0"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:permit-overrides">
+        
+    <Target></Target>
+    
+    <Rule Effect="Permit" RuleId="PermitExampleRule">
+        <!-- Define conditions here -->
+    </Rule>
+
+    <Rule RuleId="DefaultDeny" Effect="Deny"/>
+    
+</Policy>

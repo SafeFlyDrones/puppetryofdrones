@@ -1,0 +1,44 @@
+<Request xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+         ReturnPolicyIdList="false"
+         CombinedDecision="false">
+
+    <!-- Resource Attributes -->
+    <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+        <!-- Weight of the drone -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:suas-weight" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">0.5</AttributeValue>
+        </Attribute>
+        <!-- Exposed rotating parts -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:exposed-parts" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">absent</AttributeValue>
+        </Attribute>
+        <!-- Kinetic energy of the drone -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:kinetic-energy" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">10</AttributeValue>
+        </Attribute>
+        <!-- Remote ID broadcasting status -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:remote-id" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">broadcasting</AttributeValue>
+        </Attribute>
+        <!-- Commercial purpose -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:commercial-purpose" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">yes</AttributeValue>
+        </Attribute>
+        <!-- BVLOS certification -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:resource:bvlos-certification" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">approved</AttributeValue>
+        </Attribute>
+    </Attributes>
+
+    <!-- Environment Attributes -->
+    <Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment">
+        <!-- Controlled area -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:environment:area-controlled" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">not-controlled</AttributeValue>
+        </Attribute>
+        <!-- Individuals informed of risks -->
+        <Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:environment:individuals-informed" IncludeInResult="false">
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">informed</AttributeValue>
+        </Attribute>
+    </Attributes>
+</Request>

@@ -1,0 +1,11 @@
+<pdp xmlns="http://authzforce.github.io/core/xmlns/pdp/8"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://authzforce.github.io/core/xmlns/pdp/8 file:///C:/Users/17372/Desktop/pdp-test/gk/core/pdp-cli/target/pdp.xsd"
+     version="8.1">
+
+    <policyProvider id="staticPolicyProvider" xsi:type="StaticPolicyProvider">
+        <policyLocation>file:///C:/Users/17372/Desktop/pdp-test/gk/core/pdp-cli/target/policies/*.xml</policyLocation>
+    </policyProvider>
+
+        <rootPolicyRef>FAA-Drone-Rules-PolicySet</rootPolicyRef>
+</pdp>
