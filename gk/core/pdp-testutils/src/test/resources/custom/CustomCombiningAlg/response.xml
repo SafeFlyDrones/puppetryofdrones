@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Response xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17">
+	<Result>
+		<Decision>Permit</Decision>
+		<Attributes Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">bsimpson</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">write</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<PolicyIdentifierList>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P1</PolicyIdReference>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P2</PolicyIdReference>
+			<PolicySetIdReference Version="1.0">root</PolicySetIdReference>
+		</PolicyIdentifierList>
+	</Result>
+	<Result>
+		<Decision>Permit</Decision>
+		<Attributes Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">bsimpson</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<PolicyIdentifierList>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P1</PolicyIdReference>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P2</PolicyIdReference>
+			<PolicySetIdReference Version="1.0">root</PolicySetIdReference>
+		</PolicyIdentifierList>
+	</Result>
+	<Result>
+		<Decision>Deny</Decision>
+		<Attributes Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">msimpson</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">write</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<PolicyIdentifierList>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P1</PolicyIdReference>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P3</PolicyIdReference>
+			<PolicySetIdReference Version="1.0">root</PolicySetIdReference>
+		</PolicyIdentifierList>
+	</Result>
+	<Result>
+		<Decision>Permit</Decision>
+		<Attributes Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:subject:subject-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">msimpson</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action">
+			<Attribute AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" IncludeInResult="true">
+				<AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</AttributeValue>
+			</Attribute>
+		</Attributes>
+		<PolicyIdentifierList>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P1</PolicyIdReference>
+			<PolicyIdReference Version="1.0">urn:ow2:authzforce:core:pdp:test:policy:custom-combining-alg:P3</PolicyIdReference>
+			<PolicySetIdReference Version="1.0">root</PolicySetIdReference>
+		</PolicyIdentifierList>
+	</Result>
+</Response>

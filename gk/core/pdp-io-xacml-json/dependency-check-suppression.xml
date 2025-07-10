@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions>
+  <suppress>
+    <!-- Suppress CVE-2024-38820 for spring-core -->
+    <filePath>.*spring-core.*\.jar</filePath>
+    <cve>CVE-2024-38820</cve>
+  </suppress>
+</suppressions>

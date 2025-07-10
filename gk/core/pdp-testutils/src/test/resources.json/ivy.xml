@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info
+        organisation="THALES"
+        module="authzforce-ce-core-pdp-io-xacml-json"
+        status="integration">
+	</info>
+	<dependencies >
+	<!-- XSLT processor, Saxon-HE v9.8+ required for XSLT 3.0 with xsl:map function support -->
+	<dependency org="net.sf.saxon" name="Saxon-HE" rev="9.8.0-15" transitive="false" />
+	<!-- N.B.: 9.1 B is last free/open source version of Saxon supporting Java calls from XSLT, 9.0 is the last version available on Maven repositories with groupId=net.sf.saxon, and 9.1.0.8 the last with groupId=net.sourceforge.saxon -->
+	</dependencies>
+</ivy-module>
+

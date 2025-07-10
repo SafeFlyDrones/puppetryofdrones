@@ -1,0 +1,35 @@
+<Policy PolicyId="urn:night-operation-policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:permit-unless-deny"
+        Version="1.0"
+        xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17">
+    
+    <Target>
+        <AnyOf>
+            <AllOf>
+                <Match MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">night</AttributeValue>
+                    <AttributeDesignator AttributeId="urn:drone:operation-time"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="true"/>
+                </Match>
+            </AllOf>
+        </AnyOf>
+    </Target>
+
+    <Rule RuleId="night-operation-requirements" Effect="Permit">
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                    <AttributeDesignator AttributeId="urn:drone:pilot:knowledge-test"
+                                         DataType="http://www.w3.org/2001/XMLSchema#boolean"
+                                         MustBePresent="true"/>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only">
+                    <AttributeDesignator AttributeId="urn:drone:lighting:collision"
+                                         DataType="http://www.w3.org/2001/XMLSchema#boolean"
+                                         MustBePresent="true"/>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+</Policy>
