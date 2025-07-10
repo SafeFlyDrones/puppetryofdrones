@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="org.ow2.authzforce.core.pdp.impl.test.MainTest" time="1.54" tests="685" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="javax.xml.accessExternalSchema" value="all"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\17372\Desktop\gk\core\pdp-engine\target\test-classes;C:\Users\17372\Desktop\gk\core\pdp-engine\target\classes;C:\Users\17372\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.7\jcl-over-slf4j-2.0.7.jar;C:\Users\17372\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\17372\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.2\jakarta.mail-2.0.2.jar;C:\Users\17372\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\17372\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\17372\.m2\repository\org\springframework\spring-core\6.0.21\spring-core-6.0.21.jar;C:\Users\17372\.m2\repository\org\springframework\spring-jcl\6.0.21\spring-jcl-6.0.21.jar;C:\Users\17372\.m2\repository\xml-resolver\xml-resolver\1.2\xml-resolver-1.2.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\17372\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\17372\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-core-pdp-api\22.0.0\authzforce-ce-core-pdp-api-22.0.0.jar;C:\Users\17372\.m2\repository\net\sf\saxon\Saxon-HE\12.3\Saxon-HE-12.3.jar;C:\Users\17372\.m2\repository\org\xmlresolver\xmlresolver\5.2.0\xmlresolver-5.2.0.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\17372\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\17372\.m2\repository\org\xmlresolver\xmlresolver\5.2.0\xmlresolver-5.2.0-data.jar;C:\Users\17372\.m2\repository\com\google\guava\guava\32.1.3-jre\guava-32.1.3-jre.jar;C:\Users\17372\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\17372\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\17372\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\17372\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\17372\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\17372\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-xacml-model\9.0.0\authzforce-ce-xacml-model-9.0.0.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-xmlns-model\9.0.0\authzforce-ce-xmlns-model-9.0.0.jar;C:\Users\17372\.m2\repository\org\jvnet\jaxb\jaxb-plugins-runtime\4.0.0\jaxb-plugins-runtime-4.0.0.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-pdp-ext-model\9.0.0\authzforce-ce-pdp-ext-model-9.0.0.jar;C:\Users\17372\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\17372\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\17372\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\17372\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Chicago"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="sun.java.command" value="C:\Users\17372\AppData\Local\Temp\surefire2424061448045663314\surefirebooter-20250312151723710_3.jar C:\Users\17372\AppData\Local\Temp\surefire2424061448045663314 2025-03-12T15-17-23_574-jvmRun1 surefire-20250312151723710_1tmp surefire_0-20250312151723710_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\17372\Desktop\gk\core\pdp-engine\target\test-classes;C:\Users\17372\Desktop\gk\core\pdp-engine\target\classes;C:\Users\17372\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.7\jcl-over-slf4j-2.0.7.jar;C:\Users\17372\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\17372\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.2\jakarta.mail-2.0.2.jar;C:\Users\17372\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\17372\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\17372\.m2\repository\org\springframework\spring-core\6.0.21\spring-core-6.0.21.jar;C:\Users\17372\.m2\repository\org\springframework\spring-jcl\6.0.21\spring-jcl-6.0.21.jar;C:\Users\17372\.m2\repository\xml-resolver\xml-resolver\1.2\xml-resolver-1.2.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\17372\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\17372\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\17372\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-core-pdp-api\22.0.0\authzforce-ce-core-pdp-api-22.0.0.jar;C:\Users\17372\.m2\repository\net\sf\saxon\Saxon-HE\12.3\Saxon-HE-12.3.jar;C:\Users\17372\.m2\repository\org\xmlresolver\xmlresolver\5.2.0\xmlresolver-5.2.0.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\17372\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\17372\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\17372\.m2\repository\org\xmlresolver\xmlresolver\5.2.0\xmlresolver-5.2.0-data.jar;C:\Users\17372\.m2\repository\com\google\guava\guava\32.1.3-jre\guava-32.1.3-jre.jar;C:\Users\17372\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\17372\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\17372\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\17372\.m2\repository\org\checkerframework\checker-qual\3.37.0\checker-qual-3.37.0.jar;C:\Users\17372\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\17372\.m2\repository\com\google\j2objc\j2objc-annotations\2.8\j2objc-annotations-2.8.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-xacml-model\9.0.0\authzforce-ce-xacml-model-9.0.0.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-xmlns-model\9.0.0\authzforce-ce-xmlns-model-9.0.0.jar;C:\Users\17372\.m2\repository\org\jvnet\jaxb\jaxb-plugins-runtime\4.0.0\jaxb-plugins-runtime-4.0.0.jar;C:\Users\17372\.m2\repository\org\ow2\authzforce\authzforce-ce-pdp-ext-model\9.0.0\authzforce-ce-pdp-ext-model-9.0.0.jar;C:\Users\17372\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\17372\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\17372\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\17372\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\17372"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-04-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\17372\Desktop\gk\core\pdp-engine"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\17372\AppData\Local\Temp\surefire2424061448045663314\surefirebooter-20250312151723710_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.7+8-LTS-224"/>
+    <property name="user.name" value="17372"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="skipTests" value="true"/>
+    <property name="localRepository" value="C:\Users\17372\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\17372\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.7"/>
+    <property name="user.dir" value="C:\Users\17372\Desktop\gk\core\pdp-engine"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\MATLAB\R2021b\bin;C:\Program Files\HP\HP One Agent;C:\Program Files\Git\cmd;C:\Users\17372\AppData\Local\Programs\Python\Python312\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\17372\Desktop\MAVEN\apache-maven-3.9.9\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\Users\17372\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\17372\AppData\Local\Programs\Python\Python312\;C:\Users\17372\AppData\Local\Programs\Python\Launcher\;C:\Users\17372\AppData\Local\Microsoft\WindowsApps;C:\Users\17372\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\17372\Desktop\MAVEN\apache-maven-3.9.9;;c:\Users\17372\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="17.0.7+8-LTS-224"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.008"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:string-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:string-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:3.0:function:string-equal-ignore-case]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:3.0:function:string-equal-ignore-case]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:3.0:function:string-equal-ignore-case]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:boolean-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:boolean-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:integer-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:integer-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:double-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:double-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:date-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:date-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:time-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:time-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:dateTime-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:dateTime-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:dateTime-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:1.0:function:anyURI-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:1.0:function:anyURI-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:1.0:function:x500Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:1.0:function:x500Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:1.0:function:x500Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:1.0:function:hexBinary-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:1.0:function:hexBinary-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:1.0:function:base64Binary-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[37: urn:oasis:names:tc:xacml:1.0:function:base64Binary-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.EqualityFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:integer-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:integer-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:integer-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:double-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:double-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:double-add]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:integer-subtract]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:integer-subtract]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:double-subtract]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:double-subtract]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:integer-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:integer-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:integer-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:double-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:double-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:double-multiply]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:integer-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:integer-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:integer-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:integer-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:double-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:double-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:double-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:double-divide]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:1.0:function:integer-mod]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:1.0:function:integer-mod]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:1.0:function:integer-mod]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:1.0:function:integer-abs]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:1.0:function:integer-abs]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:1.0:function:double-abs]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:1.0:function:double-abs]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:1.0:function:round]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:1.0:function:round]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:1.0:function:round]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:1.0:function:floor]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:1.0:function:floor]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:1.0:function:floor]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-normalize-space]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringConversionFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:string-normalize-space]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringConversionFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:string-normalize-to-lower-case]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringConversionFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:string-normalize-to-lower-case]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringConversionFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:double-to-integer]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericConversionFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:double-to-integer]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericConversionFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:integer-to-double]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericConversionFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.003"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:or]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:and]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.004"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:1.0:function:n-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:1.0:function:not]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:1.0:function:not]" classname="org.ow2.authzforce.core.pdp.impl.test.func.LogicalFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:integer-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:integer-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:integer-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:integer-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:double-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:double-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:double-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:double-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:double-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:double-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:double-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:double-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:double-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:3.0:function:dateTime-add-dayTimeDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:3.0:function:dateTime-add-dayTimeDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:3.0:function:dateTime-add-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:3.0:function:dateTime-add-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:3.0:function:dateTime-subtract-dayTimeDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:3.0:function:dateTime-subtract-dayTimeDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:3.0:function:dateTime-subtract-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:3.0:function:dateTime-subtract-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:3.0:function:date-add-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:3.0:function:date-add-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:3.0:function:date-subtract-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:3.0:function:date-subtract-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.DateTimeArithmeticFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:string-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:string-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:string-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:string-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:string-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:string-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:string-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:string-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:string-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:time-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:time-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:time-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:time-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:time-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:time-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:time-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[37: urn:oasis:names:tc:xacml:2.0:function:time-in-range]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[38: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[39: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[40: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[41: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[42: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[43: urn:oasis:names:tc:xacml:1.0:function:dateTime-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[44: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[45: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[46: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[47: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[48: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[49: urn:oasis:names:tc:xacml:1.0:function:dateTime-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[50: urn:oasis:names:tc:xacml:1.0:function:date-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[51: urn:oasis:names:tc:xacml:1.0:function:date-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[52: urn:oasis:names:tc:xacml:1.0:function:date-greater-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[53: urn:oasis:names:tc:xacml:1.0:function:date-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[54: urn:oasis:names:tc:xacml:1.0:function:date-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[55: urn:oasis:names:tc:xacml:1.0:function:date-greater-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[56: urn:oasis:names:tc:xacml:1.0:function:date-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[57: urn:oasis:names:tc:xacml:1.0:function:date-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[58: urn:oasis:names:tc:xacml:1.0:function:date-less-than]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[59: urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[60: urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[61: urn:oasis:names:tc:xacml:1.0:function:date-less-than-or-equal]" classname="org.ow2.authzforce.core.pdp.impl.test.func.NonNumericComparisonFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:2.0:function:string-concatenate]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:2.0:function:string-concatenate]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:3.0:function:boolean-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:3.0:function:boolean-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:3.0:function:boolean-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:3.0:function:string-from-boolean]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:3.0:function:string-from-boolean]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:3.0:function:integer-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:3.0:function:integer-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:3.0:function:string-from-integer]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:3.0:function:string-from-integer]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:3.0:function:double-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:3.0:function:double-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:3.0:function:string-from-double]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:3.0:function:string-from-double]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:3.0:function:time-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:3.0:function:string-from-time]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:3.0:function:date-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:3.0:function:string-from-date]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:3.0:function:dateTime-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:3.0:function:string-from-dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:3.0:function:anyURI-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:3.0:function:string-from-anyURI]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:3.0:function:string-from-dayTimeDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:3.0:function:string-from-yearMonthDuration]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:3.0:function:x500Name-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:3.0:function:string-from-x500Name]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:3.0:function:rfc822Name-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:3.0:function:string-from-rfc822Name]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:3.0:function:ipAddress-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:3.0:function:string-from-ipAddress]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[37: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[38: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[39: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[40: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[41: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[42: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[43: urn:oasis:names:tc:xacml:3.0:function:dnsName-from-string]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[44: urn:oasis:names:tc:xacml:3.0:function:string-from-dnsName]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[45: urn:oasis:names:tc:xacml:3.0:function:string-starts-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[46: urn:oasis:names:tc:xacml:3.0:function:string-starts-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[47: urn:oasis:names:tc:xacml:3.0:function:anyURI-starts-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[48: urn:oasis:names:tc:xacml:3.0:function:anyURI-starts-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[49: urn:oasis:names:tc:xacml:3.0:function:string-ends-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[50: urn:oasis:names:tc:xacml:3.0:function:string-ends-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[51: urn:oasis:names:tc:xacml:3.0:function:anyURI-ends-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[52: urn:oasis:names:tc:xacml:3.0:function:anyURI-ends-with]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[53: urn:oasis:names:tc:xacml:3.0:function:string-contains]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[54: urn:oasis:names:tc:xacml:3.0:function:string-contains]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[55: urn:oasis:names:tc:xacml:3.0:function:anyURI-contains]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[56: urn:oasis:names:tc:xacml:3.0:function:anyURI-contains]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[57: urn:oasis:names:tc:xacml:3.0:function:string-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.006"/>
+  <testcase name="testEvaluate[58: urn:oasis:names:tc:xacml:3.0:function:string-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[59: urn:oasis:names:tc:xacml:3.0:function:string-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[60: urn:oasis:names:tc:xacml:3.0:function:string-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[61: urn:oasis:names:tc:xacml:3.0:function:string-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[62: urn:oasis:names:tc:xacml:3.0:function:anyURI-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[63: urn:oasis:names:tc:xacml:3.0:function:anyURI-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[64: urn:oasis:names:tc:xacml:3.0:function:anyURI-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[65: urn:oasis:names:tc:xacml:3.0:function:anyURI-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[66: urn:oasis:names:tc:xacml:3.0:function:anyURI-substring]" classname="org.ow2.authzforce.core.pdp.impl.test.func.StringFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:string-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:string-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:boolean-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:double-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:double-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:double-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:anyURI-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:anyURI-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:anyURI-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:hexBinary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:hexBinary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:hexBinary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:base64Binary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:base64Binary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:base64Binary-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:time-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:time-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:time-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:1.0:function:date-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:1.0:function:date-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:1.0:function:date-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:1.0:function:dateTime-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:1.0:function:dateTime-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:1.0:function:dateTime-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:1.0:function:x500Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[37: urn:oasis:names:tc:xacml:1.0:function:x500Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[38: urn:oasis:names:tc:xacml:1.0:function:x500Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[39: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[40: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[41: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[42: urn:oasis:names:tc:xacml:2.0:function:ipAddress-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[43: urn:oasis:names:tc:xacml:2.0:function:ipAddress-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[44: urn:oasis:names:tc:xacml:2.0:function:ipAddress-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[45: urn:oasis:names:tc:xacml:2.0:function:dnsName-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[46: urn:oasis:names:tc:xacml:2.0:function:dnsName-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[47: urn:oasis:names:tc:xacml:2.0:function:dnsName-one-and-only]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[48: urn:oasis:names:tc:xacml:1.0:function:string-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[49: urn:oasis:names:tc:xacml:1.0:function:string-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[50: urn:oasis:names:tc:xacml:1.0:function:string-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[51: urn:oasis:names:tc:xacml:1.0:function:boolean-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[52: urn:oasis:names:tc:xacml:1.0:function:boolean-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[53: urn:oasis:names:tc:xacml:1.0:function:boolean-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[54: urn:oasis:names:tc:xacml:1.0:function:integer-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[55: urn:oasis:names:tc:xacml:1.0:function:integer-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[56: urn:oasis:names:tc:xacml:1.0:function:integer-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[57: urn:oasis:names:tc:xacml:1.0:function:double-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[58: urn:oasis:names:tc:xacml:1.0:function:double-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[59: urn:oasis:names:tc:xacml:1.0:function:double-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[60: urn:oasis:names:tc:xacml:1.0:function:anyURI-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[61: urn:oasis:names:tc:xacml:1.0:function:anyURI-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[62: urn:oasis:names:tc:xacml:1.0:function:anyURI-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[63: urn:oasis:names:tc:xacml:1.0:function:hexBinary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[64: urn:oasis:names:tc:xacml:1.0:function:hexBinary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[65: urn:oasis:names:tc:xacml:1.0:function:hexBinary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[66: urn:oasis:names:tc:xacml:1.0:function:base64Binary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[67: urn:oasis:names:tc:xacml:1.0:function:base64Binary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[68: urn:oasis:names:tc:xacml:1.0:function:base64Binary-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[69: urn:oasis:names:tc:xacml:1.0:function:time-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[70: urn:oasis:names:tc:xacml:1.0:function:time-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[71: urn:oasis:names:tc:xacml:1.0:function:time-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[72: urn:oasis:names:tc:xacml:1.0:function:date-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[73: urn:oasis:names:tc:xacml:1.0:function:date-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[74: urn:oasis:names:tc:xacml:1.0:function:date-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[75: urn:oasis:names:tc:xacml:1.0:function:dateTime-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[76: urn:oasis:names:tc:xacml:1.0:function:dateTime-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[77: urn:oasis:names:tc:xacml:1.0:function:dateTime-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[78: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[79: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[80: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[81: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[82: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[83: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[84: urn:oasis:names:tc:xacml:1.0:function:x500Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[85: urn:oasis:names:tc:xacml:1.0:function:x500Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[86: urn:oasis:names:tc:xacml:1.0:function:x500Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[87: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[88: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[89: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[90: urn:oasis:names:tc:xacml:2.0:function:ipAddress-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[91: urn:oasis:names:tc:xacml:2.0:function:ipAddress-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[92: urn:oasis:names:tc:xacml:2.0:function:ipAddress-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[93: urn:oasis:names:tc:xacml:2.0:function:dnsName-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[94: urn:oasis:names:tc:xacml:2.0:function:dnsName-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[95: urn:oasis:names:tc:xacml:2.0:function:dnsName-bag-size]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[96: urn:oasis:names:tc:xacml:1.0:function:string-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[97: urn:oasis:names:tc:xacml:1.0:function:string-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[98: urn:oasis:names:tc:xacml:1.0:function:string-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[99: urn:oasis:names:tc:xacml:1.0:function:boolean-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[100: urn:oasis:names:tc:xacml:1.0:function:boolean-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[101: urn:oasis:names:tc:xacml:1.0:function:boolean-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[102: urn:oasis:names:tc:xacml:1.0:function:integer-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[103: urn:oasis:names:tc:xacml:1.0:function:integer-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[104: urn:oasis:names:tc:xacml:1.0:function:integer-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[105: urn:oasis:names:tc:xacml:1.0:function:double-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[106: urn:oasis:names:tc:xacml:1.0:function:double-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[107: urn:oasis:names:tc:xacml:1.0:function:double-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[108: urn:oasis:names:tc:xacml:1.0:function:anyURI-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[109: urn:oasis:names:tc:xacml:1.0:function:anyURI-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[110: urn:oasis:names:tc:xacml:1.0:function:anyURI-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[111: urn:oasis:names:tc:xacml:1.0:function:hexBinary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[112: urn:oasis:names:tc:xacml:1.0:function:hexBinary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[113: urn:oasis:names:tc:xacml:1.0:function:hexBinary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[114: urn:oasis:names:tc:xacml:1.0:function:base64Binary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[115: urn:oasis:names:tc:xacml:1.0:function:base64Binary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[116: urn:oasis:names:tc:xacml:1.0:function:base64Binary-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[117: urn:oasis:names:tc:xacml:1.0:function:time-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[118: urn:oasis:names:tc:xacml:1.0:function:time-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[119: urn:oasis:names:tc:xacml:1.0:function:time-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[120: urn:oasis:names:tc:xacml:1.0:function:date-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[121: urn:oasis:names:tc:xacml:1.0:function:date-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[122: urn:oasis:names:tc:xacml:1.0:function:date-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[123: urn:oasis:names:tc:xacml:1.0:function:dateTime-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[124: urn:oasis:names:tc:xacml:1.0:function:dateTime-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[125: urn:oasis:names:tc:xacml:1.0:function:dateTime-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[126: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[127: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[128: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[129: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[130: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[131: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[132: urn:oasis:names:tc:xacml:1.0:function:x500Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[133: urn:oasis:names:tc:xacml:1.0:function:x500Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[134: urn:oasis:names:tc:xacml:1.0:function:x500Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[135: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[136: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[137: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[138: urn:oasis:names:tc:xacml:2.0:function:ipAddress-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[139: urn:oasis:names:tc:xacml:2.0:function:ipAddress-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[140: urn:oasis:names:tc:xacml:2.0:function:ipAddress-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[141: urn:oasis:names:tc:xacml:2.0:function:dnsName-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[142: urn:oasis:names:tc:xacml:2.0:function:dnsName-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[143: urn:oasis:names:tc:xacml:2.0:function:dnsName-is-in]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[144: urn:oasis:names:tc:xacml:1.0:function:string-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[145: urn:oasis:names:tc:xacml:1.0:function:boolean-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[146: urn:oasis:names:tc:xacml:1.0:function:integer-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[147: urn:oasis:names:tc:xacml:1.0:function:double-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[148: urn:oasis:names:tc:xacml:1.0:function:anyURI-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[149: urn:oasis:names:tc:xacml:1.0:function:hexBinary-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[150: urn:oasis:names:tc:xacml:1.0:function:base64Binary-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[151: urn:oasis:names:tc:xacml:1.0:function:time-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[152: urn:oasis:names:tc:xacml:1.0:function:date-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[153: urn:oasis:names:tc:xacml:1.0:function:dateTime-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[154: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[155: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[156: urn:oasis:names:tc:xacml:1.0:function:x500Name-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[157: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[158: urn:oasis:names:tc:xacml:2.0:function:ipAddress-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[159: urn:oasis:names:tc:xacml:2.0:function:dnsName-bag]" classname="org.ow2.authzforce.core.pdp.impl.test.func.BagFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.003"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:boolean-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:integer-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:double-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:time-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:date-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:dateTime-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:anyURI-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:hexBinary-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:base64Binary-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:x500Name-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-intersection]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:string-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:boolean-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:boolean-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:integer-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:integer-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:double-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:double-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:time-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:time-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:1.0:function:date-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:1.0:function:date-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:1.0:function:dateTime-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:1.0:function:dateTime-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:1.0:function:anyURI-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:1.0:function:anyURI-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:1.0:function:hexBinary-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[31: urn:oasis:names:tc:xacml:1.0:function:hexBinary-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[32: urn:oasis:names:tc:xacml:1.0:function:base64Binary-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[33: urn:oasis:names:tc:xacml:1.0:function:base64Binary-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[34: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[35: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[36: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[37: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[38: urn:oasis:names:tc:xacml:1.0:function:x500Name-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[39: urn:oasis:names:tc:xacml:1.0:function:x500Name-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[40: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[41: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-at-least-one-member-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[42: urn:oasis:names:tc:xacml:1.0:function:string-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[43: urn:oasis:names:tc:xacml:1.0:function:boolean-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[44: urn:oasis:names:tc:xacml:1.0:function:integer-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[45: urn:oasis:names:tc:xacml:1.0:function:double-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[46: urn:oasis:names:tc:xacml:1.0:function:time-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[47: urn:oasis:names:tc:xacml:1.0:function:date-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[48: urn:oasis:names:tc:xacml:1.0:function:dateTime-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[49: urn:oasis:names:tc:xacml:1.0:function:anyURI-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[50: urn:oasis:names:tc:xacml:1.0:function:hexBinary-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[51: urn:oasis:names:tc:xacml:1.0:function:base64Binary-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[52: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[53: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[54: urn:oasis:names:tc:xacml:1.0:function:x500Name-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[55: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-union]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[56: urn:oasis:names:tc:xacml:1.0:function:string-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[57: urn:oasis:names:tc:xacml:1.0:function:string-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[58: urn:oasis:names:tc:xacml:1.0:function:string-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[59: urn:oasis:names:tc:xacml:1.0:function:boolean-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[60: urn:oasis:names:tc:xacml:1.0:function:boolean-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[61: urn:oasis:names:tc:xacml:1.0:function:boolean-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[62: urn:oasis:names:tc:xacml:1.0:function:integer-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[63: urn:oasis:names:tc:xacml:1.0:function:integer-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[64: urn:oasis:names:tc:xacml:1.0:function:integer-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[65: urn:oasis:names:tc:xacml:1.0:function:double-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[66: urn:oasis:names:tc:xacml:1.0:function:double-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[67: urn:oasis:names:tc:xacml:1.0:function:double-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[68: urn:oasis:names:tc:xacml:1.0:function:time-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[69: urn:oasis:names:tc:xacml:1.0:function:time-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[70: urn:oasis:names:tc:xacml:1.0:function:time-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[71: urn:oasis:names:tc:xacml:1.0:function:date-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[72: urn:oasis:names:tc:xacml:1.0:function:date-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[73: urn:oasis:names:tc:xacml:1.0:function:date-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[74: urn:oasis:names:tc:xacml:1.0:function:dateTime-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[75: urn:oasis:names:tc:xacml:1.0:function:dateTime-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[76: urn:oasis:names:tc:xacml:1.0:function:dateTime-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[77: urn:oasis:names:tc:xacml:1.0:function:anyURI-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[78: urn:oasis:names:tc:xacml:1.0:function:anyURI-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[79: urn:oasis:names:tc:xacml:1.0:function:anyURI-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[80: urn:oasis:names:tc:xacml:1.0:function:hexBinary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[81: urn:oasis:names:tc:xacml:1.0:function:hexBinary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[82: urn:oasis:names:tc:xacml:1.0:function:hexBinary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[83: urn:oasis:names:tc:xacml:1.0:function:base64Binary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[84: urn:oasis:names:tc:xacml:1.0:function:base64Binary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[85: urn:oasis:names:tc:xacml:1.0:function:base64Binary-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[86: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[87: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[88: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[89: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[90: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[91: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[92: urn:oasis:names:tc:xacml:1.0:function:x500Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[93: urn:oasis:names:tc:xacml:1.0:function:x500Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[94: urn:oasis:names:tc:xacml:1.0:function:x500Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[95: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[96: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[97: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-subset]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[98: urn:oasis:names:tc:xacml:1.0:function:string-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[99: urn:oasis:names:tc:xacml:1.0:function:string-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[100: urn:oasis:names:tc:xacml:1.0:function:string-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[101: urn:oasis:names:tc:xacml:1.0:function:boolean-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[102: urn:oasis:names:tc:xacml:1.0:function:boolean-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[103: urn:oasis:names:tc:xacml:1.0:function:boolean-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[104: urn:oasis:names:tc:xacml:1.0:function:integer-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[105: urn:oasis:names:tc:xacml:1.0:function:integer-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[106: urn:oasis:names:tc:xacml:1.0:function:integer-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[107: urn:oasis:names:tc:xacml:1.0:function:double-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[108: urn:oasis:names:tc:xacml:1.0:function:double-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[109: urn:oasis:names:tc:xacml:1.0:function:double-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[110: urn:oasis:names:tc:xacml:1.0:function:time-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[111: urn:oasis:names:tc:xacml:1.0:function:time-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[112: urn:oasis:names:tc:xacml:1.0:function:time-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[113: urn:oasis:names:tc:xacml:1.0:function:date-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[114: urn:oasis:names:tc:xacml:1.0:function:date-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[115: urn:oasis:names:tc:xacml:1.0:function:date-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[116: urn:oasis:names:tc:xacml:1.0:function:dateTime-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[117: urn:oasis:names:tc:xacml:1.0:function:dateTime-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[118: urn:oasis:names:tc:xacml:1.0:function:dateTime-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[119: urn:oasis:names:tc:xacml:1.0:function:anyURI-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[120: urn:oasis:names:tc:xacml:1.0:function:anyURI-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[121: urn:oasis:names:tc:xacml:1.0:function:anyURI-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[122: urn:oasis:names:tc:xacml:1.0:function:hexBinary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[123: urn:oasis:names:tc:xacml:1.0:function:hexBinary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[124: urn:oasis:names:tc:xacml:1.0:function:hexBinary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[125: urn:oasis:names:tc:xacml:1.0:function:base64Binary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[126: urn:oasis:names:tc:xacml:1.0:function:base64Binary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[127: urn:oasis:names:tc:xacml:1.0:function:base64Binary-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[128: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[129: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[130: urn:oasis:names:tc:xacml:3.0:function:dayTimeDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[131: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[132: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[133: urn:oasis:names:tc:xacml:3.0:function:yearMonthDuration-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[134: urn:oasis:names:tc:xacml:1.0:function:x500Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[135: urn:oasis:names:tc:xacml:1.0:function:x500Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[136: urn:oasis:names:tc:xacml:1.0:function:x500Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[137: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[138: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[139: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-set-equals]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SetFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:3.0:function:any-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:3.0:function:any-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:3.0:function:any-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:3.0:function:any-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:3.0:function:all-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:3.0:function:all-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:3.0:function:all-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:3.0:function:all-of]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:3.0:function:any-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:3.0:function:any-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.006"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:3.0:function:any-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:3.0:function:any-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:3.0:function:any-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.003"/>
+  <testcase name="testEvaluate[16: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[17: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[18: urn:oasis:names:tc:xacml:1.0:function:all-of-any]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[19: urn:oasis:names:tc:xacml:1.0:function:any-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[20: urn:oasis:names:tc:xacml:1.0:function:any-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[21: urn:oasis:names:tc:xacml:1.0:function:all-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[22: urn:oasis:names:tc:xacml:1.0:function:all-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[23: urn:oasis:names:tc:xacml:1.0:function:all-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[24: urn:oasis:names:tc:xacml:1.0:function:all-of-all]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[25: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[26: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[27: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[28: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[29: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[30: urn:oasis:names:tc:xacml:3.0:function:map]" classname="org.ow2.authzforce.core.pdp.impl.test.func.HigherOrderFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:string-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.007"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:string-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:2.0:function:anyURI-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:2.0:function:anyURI-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.002"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.128"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:2.0:function:ipAddress-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:2.0:function:dnsName-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:2.0:function:dnsName-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:2.0:function:rfc822Name-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:2.0:function:rfc822Name-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:2.0:function:x500Name-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:2.0:function:x500Name-regexp-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.RegExpBasedFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[0: urn:oasis:names:tc:xacml:1.0:function:x500Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.001"/>
+  <testcase name="testEvaluate[1: urn:oasis:names:tc:xacml:1.0:function:x500Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[2: urn:oasis:names:tc:xacml:1.0:function:x500Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[3: urn:oasis:names:tc:xacml:1.0:function:x500Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[4: urn:oasis:names:tc:xacml:1.0:function:x500Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[5: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[6: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[7: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[8: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[9: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[10: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[11: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[12: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[13: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[14: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.0"/>
+  <testcase name="testEvaluate[15: urn:oasis:names:tc:xacml:1.0:function:rfc822Name-match]" classname="org.ow2.authzforce.core.pdp.impl.test.func.SpecialMatchFunctionsTest" time="0.001"/>
+  <testcase name="test[0: [] -&gt; http://www.w3.org/2001/XMLSchema#string]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.004"/>
+  <testcase name="test[1: [string] -&gt; http://www.w3.org/2001/XMLSchema#string]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.27"/>
+  <testcase name="test[2: [string1, string2] -&gt; http://www.w3.org/2001/XMLSchema#string]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.003"/>
+  <testcase name="test[3: [null] -&gt; http://www.w3.org/2001/XMLSchema#boolean]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[4: [true] -&gt; http://www.w3.org/2001/XMLSchema#boolean]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[5: [true, false] -&gt; http://www.w3.org/2001/XMLSchema#boolean]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[6: [null] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[7: [-32768] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[8: [-2147483648] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[9: [0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[10: [9223372036854775807] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[11: [9223372036854775807] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[12: [0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[13: [0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.003"/>
+  <testcase name="test[14: [0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[15: [9223372036854775808] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[16: [9223372036854775808] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[17: [9223372036854775808] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[18: [32767, 2147483647, 0, 0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.005"/>
+  <testcase name="test[19: [32767, 2147483647, 9223372036854775807, 0] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[20: [32767, 2147483647, 9223372036854775807, 9223372036854775808] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[21: [null] -&gt; http://www.w3.org/2001/XMLSchema#double]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[22: [2.2250738585072014E-308] -&gt; http://www.w3.org/2001/XMLSchema#double]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[23: [1.17549435E-38] -&gt; http://www.w3.org/2001/XMLSchema#double]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[24: [1.17549435E-38, 2.2250738585072014E-308] -&gt; http://www.w3.org/2001/XMLSchema#double]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[25: [null] -&gt; http://www.w3.org/2001/XMLSchema#time]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[26: [15:17:24.838155] -&gt; http://www.w3.org/2001/XMLSchema#time]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[27: [15:17:24.840155800-05:00] -&gt; http://www.w3.org/2001/XMLSchema#time]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[28: [15:17:24.840155800, 15:17:24.840155800-05:00] -&gt; http://www.w3.org/2001/XMLSchema#time]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[29: [null] -&gt; http://www.w3.org/2001/XMLSchema#date]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[30: [2025-03-12] -&gt; http://www.w3.org/2001/XMLSchema#date]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[31: [null] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[32: [2025-03-12T15:17:24.840155800] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[33: [2025-03-12T15:17:24.840155800-05:00] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[34: [2025-03-12T15:17:24.840155800-05:00[America/Chicago]] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.003"/>
+  <testcase name="test[35: [2025-03-12T20:17:24.840155800Z] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.003"/>
+  <testcase name="test[36: [2025-03-12T15:17:24.840155800, 2025-03-12T15:17:24.840155800-05:00, 2025-03-12T15:17:24.840155800-05:00[America/Chicago], 2025-03-12T20:17:24.840155800Z] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[37: [2025-03-12T15:17:24.840155800] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[38: [] -&gt; http://www.w3.org/2001/XMLSchema#anyURI]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[39: [null] -&gt; http://www.w3.org/2001/XMLSchema#hexBinary]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[40: [[B@460f76a6] -&gt; http://www.w3.org/2001/XMLSchema#hexBinary]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[41: [[B@55f3c410] -&gt; http://www.w3.org/2001/XMLSchema#hexBinary]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.001"/>
+  <testcase name="test[42: [[B@11acdc30] -&gt; http://www.w3.org/2001/XMLSchema#hexBinary]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[43: [null] -&gt; urn:oasis:names:tc:xacml:1.0:data-type:x500Name]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[44: [CN=someCN] -&gt; urn:oasis:names:tc:xacml:1.0:data-type:x500Name]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.002"/>
+  <testcase name="test[45: [0, 2025-03-12] -&gt; http://www.w3.org/2001/XMLSchema#integer]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+  <testcase name="test[46: [Wed Mar 12 15:17:24 CDT 2025] -&gt; http://www.w3.org/2001/XMLSchema#dateTime]" classname="org.ow2.authzforce.core.pdp.impl.test.value.StandardJavaTypeToXacmlAttributeDatatypeConversionTest" time="0.0"/>
+</testsuite>

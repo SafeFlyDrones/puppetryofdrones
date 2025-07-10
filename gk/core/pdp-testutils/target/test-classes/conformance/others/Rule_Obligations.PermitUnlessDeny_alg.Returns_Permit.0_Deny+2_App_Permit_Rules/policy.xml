@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:permit-unless-deny" Version="1.0">
+    <Description>
+        Purpose: Test Obligations on Rules, Case: Permit: RuleCombiningAlgorithm permit-unless-deny. No Deny Rule. Multiple applicable Permit Rules.
+    </Description>
+    <Target/>
+    <Rule Effect="Permit" RuleId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule2">
+        <Description>
+            A subject who is at least 5 years older than Bart
+            Simpson may read Bart Simpson's medical record. PERMIT.
+        </Description>
+        <Condition>
+<Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-greater-than-or-equal">
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-subtract">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:age" Category="urn:oasis:names:tc:xacml:1.0:subject-category:access-subject" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="false"/>
+                </Apply>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:integer-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:2.0:conformance-test:bart-simpson-age" Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment" DataType="http://www.w3.org/2001/XMLSchema#integer" MustBePresent="false"/>
+                </Apply>
+            </Apply>
+            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#integer">5</AttributeValue>
+</Apply>
+        </Condition>
+        <ObligationExpressions>
+            <ObligationExpression ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule2:obligation1" FulfillOn="Permit" />
+            <ObligationExpression ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule2:obligation2" FulfillOn="Permit" />
+        </ObligationExpressions>
+    </Rule>
+    <Rule Effect="Permit" RuleId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule3">
+        <ObligationExpressions>
+            <ObligationExpression ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule3:obligation1" FulfillOn="Permit" />
+            <ObligationExpression ObligationId="urn:oasis:names:tc:xacml:2.0:conformance-test:IIIA001quater:rule3:obligation2" FulfillOn="Permit" />
+        </ObligationExpressions>
+    </Rule>
+</Policy>

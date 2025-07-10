@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1741756074745">
+    <module artifactId="authzforce-ce-core-pdp-testutils" groupId="org.ow2.authzforce" version="21.0.2-SNAPSHOT"/>
+    <files>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\TestUtils.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\XacmlXmlPdpTestHelper.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\CustomJsonObjectBasedAttributeValue.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\MongoDbPolicyProvider.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestAttributeProvider.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestCombinedDecisionXacmlJaxbResultPostprocessor.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestDnsNameValueEqualFunction.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestDnsNameWithPortValue.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestOnPermitApplySecondCombiningAlg.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\testutil\ext\TestXacmlPolicyAttributeValue.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\CustomPdpTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\CustomTestRequestPreprocessorFactory.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\MainTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\MongoDbPolicyProviderTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\NonRegressionTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\PdpGetStaticApplicablePoliciesTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\TestExtensibleSimpleValue.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\TestExtensibleSimpleValueEqualFunction.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\conformance\ConformanceV3FromV2Test.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\conformance\ConformanceV3OthersTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\conformance\MandatoryConformanceV3FromV2Test.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\conformance\OptionalConformanceV3FromV2Test.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\PdpEngineXacmlJsonAdapters.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\XacmlJsonConformanceMultipleDecisionProfileTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\XacmlJsonConformanceV3MandatoryTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\XacmlJsonNonRegressionTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\XacmlJsonOtherTests.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\json\XacmlJsonTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\pep\cxf\EmbeddedPdpBasedAuthzInterceptor.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\pep\cxf\EmbeddedPdpBasedAuthzInterceptorTest.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\pep\cxf\EmbeddedPdpBasedSoapInterceptor.java" result="NOOP"/>
+        <file path="src\test\java\org\ow2\authzforce\core\pdp\testutil\test\pep\cxf\Server.java" result="NOOP"/>
+    </files>
+</licensePluginReport>

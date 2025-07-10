@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <taskdef resource="net/sf/antcontrib/antlib.xml" />
+    <ant antfile="C:\Users\17372\Desktop\gk\core\pdp-testutils/src/test/resources.json/build.xml" inheritRefs="false" inheritAll="false">
+      <property name="src.dir" value="C:\Users\17372\Desktop\gk\core\pdp-testutils/src/test/resources/conformance/xacml-3.0-from-2.0-ct/optional/xml+json" />
+      <property name="target.dir" value="C:\Users\17372\Desktop\gk\core\pdp-testutils/target/generated-test-resources/conformance/xacml-3.0-from-2.0-ct/optional/json" />
+    </ant>
+  </target>
+</project>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.ow2.authzforce.core.pdp.impl.test.MainTest
+-------------------------------------------------------------------------------
+Tests run: 685, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.540 s -- in org.ow2.authzforce.core.pdp.impl.test.MainTest

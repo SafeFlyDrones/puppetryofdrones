@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<licensePluginReport goal="FORMAT" timestamp="1741756072612">
+    <module artifactId="authzforce-ce-core-pdp-io-xacml-json" groupId="org.ow2.authzforce" version="21.0.2-SNAPSHOT"/>
+    <files>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\BaseXacmlJsonRequestPreprocessor.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\BaseXacmlJsonResultPostprocessor.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\IndividualXacmlJsonRequest.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\MultipleDecisionXacmlJsonRequestPreprocessor.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\SerializableJSONObject.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\SingleDecisionXacmlJsonRequestPreprocessor.java" result="NOOP"/>
+        <file path="src\main\java\org\ow2\authzforce\core\pdp\io\xacml\json\XacmlJsonParsingUtils.java" result="NOOP"/>
+    </files>
+</licensePluginReport>
