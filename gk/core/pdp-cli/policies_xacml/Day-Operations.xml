@@ -1,0 +1,50 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="urn:drone-policy:policy:day-operation"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:permit-overrides"
+        Version="1.0">
+
+    <Target />
+
+    <!--
+        Permit only if the request time is during daytime.
+        Daytime is defined as: 06:00:00 <= current-time < 18:00:00
+        If the request is not in daytime, this policy becomes NotApplicable.
+    -->
+    <Rule RuleId="urn:drone-policy:rule:day-operation:permit-daytime-request" Effect="Permit">
+        <Description>
+            Permit operation if current time is between 06:00:00 (inclusive)
+            and 18:00:00 (exclusive).
+        </Description>
+
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+
+                <!-- current-time >= 06:00:00 -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                            DataType="http://www.w3.org/2001/XMLSchema#time"
+                            MustBePresent="true"/>
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">06:00:00</AttributeValue>
+                </Apply>
+
+                <!-- current-time < 18:00:00 -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than">
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                            DataType="http://www.w3.org/2001/XMLSchema#time"
+                            MustBePresent="true"/>
+                    </Apply>
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+                </Apply>
+
+            </Apply>
+        </Condition>
+    </Rule>
+
+</Policy>

@@ -1,0 +1,229 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="urn:drone-policy:policy:night-operation"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+
+    <Target/>
+
+    <!-- DENY if it is night and any required compliance attribute is not Permit -->
+    <Rule RuleId="urn:drone-policy:rule:night-operation:deny-noncompliant-night-request" Effect="Deny">
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+
+                <!-- Night time check -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator
+                                AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                DataType="http://www.w3.org/2001/XMLSchema#time"
+                                MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator
+                                AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                DataType="http://www.w3.org/2001/XMLSchema#time"
+                                MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">06:00:00</AttributeValue>
+                    </Apply>
+
+                </Apply>
+
+                <!-- Any attribute NOT equal to Permit -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:night-operation-knowledge-requirement"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:night-operation-lighting-requirement"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:civil-twilight-operation-lighting"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:civil-twilight-time-definition"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:lighting-safety-adjustment"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:not">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                            <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                                <AttributeDesignator
+                                    AttributeId="urn:drone-policy:resource:certificate-waiver-expiration"
+                                    Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                    DataType="http://www.w3.org/2001/XMLSchema#string"
+                                    MustBePresent="true"/>
+                            </Apply>
+                        </Apply>
+                    </Apply>
+
+                </Apply>
+
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- PERMIT only if it is night and all required compliance attributes equal Permit -->
+    <Rule RuleId="urn:drone-policy:rule:night-operation:permit-compliant-night-request" Effect="Permit">
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:and">
+
+                <!-- Night time check -->
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:or">
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-greater-than-or-equal">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator
+                                AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                DataType="http://www.w3.org/2001/XMLSchema#time"
+                                MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">18:00:00</AttributeValue>
+                    </Apply>
+
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-less-than">
+                        <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:time-one-and-only">
+                            <AttributeDesignator
+                                AttributeId="urn:oasis:names:tc:xacml:1.0:environment:current-time"
+                                Category="urn:oasis:names:tc:xacml:3.0:attribute-category:environment"
+                                DataType="http://www.w3.org/2001/XMLSchema#time"
+                                MustBePresent="true"/>
+                        </Apply>
+                        <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#time">06:00:00</AttributeValue>
+                    </Apply>
+
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:night-operation-knowledge-requirement"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:night-operation-lighting-requirement"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:civil-twilight-operation-lighting"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:civil-twilight-time-definition"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:lighting-safety-adjustment"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                    <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Permit</AttributeValue>
+                    <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                        <AttributeDesignator
+                            AttributeId="urn:drone-policy:resource:certificate-waiver-expiration"
+                            Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                            DataType="http://www.w3.org/2001/XMLSchema#string"
+                            MustBePresent="true"/>
+                    </Apply>
+                </Apply>
+
+            </Apply>
+        </Condition>
+    </Rule>
+
+</Policy>

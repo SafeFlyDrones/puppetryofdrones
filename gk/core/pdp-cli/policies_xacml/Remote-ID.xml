@@ -1,0 +1,34 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Remote-ID-Policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+    <Target />
+    <Rule RuleId="Remote-ID-Permit" Effect="Permit">
+        <Description>Permit operations if drone broadcasts identification and location.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:remote-id"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">broadcasting</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+    <Rule RuleId="Remote-ID-Deny" Effect="Deny">
+        <Description>Deny operations if drone does not broadcast identification and location.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:remote-id"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                         DataType="http://www.w3.org/2001/XMLSchema#string"
+                                         MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">not-broadcasting</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+</Policy>

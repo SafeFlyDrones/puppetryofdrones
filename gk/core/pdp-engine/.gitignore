@@ -1,4 +1,4 @@
-/target
+#/target
 /.classpath
 /.project
 /bin
@@ -8,10 +8,10 @@
 /.settings/org.eclipse.wst.common.component
 /.settings/org.eclipse.wst.common.project.facet.core.xml
 /.settings/org.sonar.ide.eclipse.core.prefs
-*.log
+#*.log
 /.pmd
 /.eclipse-pmd
 /.pmdruleset.xml
 /.README.md.html
 /.CHANGELOG.md.html
-/target/
+#/target/

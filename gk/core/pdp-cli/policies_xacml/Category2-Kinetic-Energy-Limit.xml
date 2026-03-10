@@ -1,0 +1,34 @@
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Category2-Kinetic-Energy-Limit-Policy"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides"
+        Version="1.0">
+    <Target />
+    <Rule RuleId="Category2-Kinetic-Energy-Limit-Permit" Effect="Permit">
+        <Description>Allow Category 2 operations if kinetic energy does not exceed 11 foot-pounds.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:double-less-than-or-equal">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:double-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:kinetic-energy"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                         DataType="http://www.w3.org/2001/XMLSchema#double"
+                                         MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">11</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+    <Rule RuleId="Category2-Kinetic-Energy-Limit-Deny" Effect="Deny">
+        <Description>Deny Category 2 operations if kinetic energy exceeds 11 foot-pounds.</Description>
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:double-greater-than">
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:double-one-and-only">
+                    <AttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:resource:kinetic-energy"
+                                         Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource"
+                                         DataType="http://www.w3.org/2001/XMLSchema#double"
+                                         MustBePresent="true" />
+                </Apply>
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#double">11</AttributeValue>
+            </Apply>
+        </Condition>
+    </Rule>
+</Policy>

@@ -4,7 +4,7 @@
      version="8.1">
 
     <policyProvider id="staticPolicyProvider" xsi:type="StaticPolicyProvider">
-        <policyLocation>file:///C:/Users/17372/Desktop/pdp-test/gk/core/pdp-cli/target/policies/*.xml</policyLocation>
+        <policyLocation>file:///C:/Users/17372/Desktop/pdp-test/gk/core/pdp-cli/policies_xacml/*.xml</policyLocation>
     </policyProvider>
 
         <rootPolicyRef>FAA-Drone-Rules-PolicySet</rootPolicyRef>

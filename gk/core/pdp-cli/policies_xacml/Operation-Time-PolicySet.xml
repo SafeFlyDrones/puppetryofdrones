@@ -1,0 +1,11 @@
+<PolicySet xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+           PolicySetId="Operation-Time-PolicySet"
+           PolicyCombiningAlgId="urn:oasis:names:tc:xacml:3.0:policy-combining-algorithm:permit-overrides"
+           Version="1.0">
+
+    <Target />
+
+    <PolicyIdReference>urn:drone-policy:policy:day-operation</PolicyIdReference>
+    <PolicyIdReference>urn:drone-policy:policy:night-operation</PolicyIdReference>
+
+</PolicySet>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Policy xmlns="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17"
+        PolicyId="Operations-Over-Humans"
+        Version="1.0"
+        RuleCombiningAlgId="urn:oasis:names:tc:xacml:3.0:rule-combining-algorithm:deny-overrides">
+    
+    <Description>Policy denying operations over humans</Description>
+    
+    <Target>
+        <!-- Applies to all requests -->
+    </Target>
+
+    <Rule RuleId="OperationOverHumansDeny" Effect="Deny">
+        <Condition>
+            <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-equal">
+                <AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">operation-over-humans</AttributeValue>
+                <Apply FunctionId="urn:oasis:names:tc:xacml:1.0:function:string-one-and-only">
+                    <AttributeDesignator 
+                        AttributeId="urn:example:operation-type"
+                        Category="urn:oasis:names:tc:xacml:3.0:attribute-category:action"
+                        DataType="http://www.w3.org/2001/XMLSchema#string"
+                        MustBePresent="true"/>
+                </Apply>
+            </Apply>
+        </Condition>
+    </Rule>
+
+    <!-- Default Deny Rule -->
+    <Rule RuleId="deny-all-others" Effect="Deny"/>
+</Policy>

@@ -23,7 +23,7 @@ import org.ow2.authzforce.xmlns.pdp.ext.AbstractPolicyProvider;
 /**
  * 
  * <pre>
- * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;p xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p522200_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:p747075_="https://jakarta.ee/xml/ns/jaxb" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&#13;
+ * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;p xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p406479_="https://jakarta.ee/xml/ns/jaxb" xmlns:p830712_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&#13;
  *                     Policy(Set) Provider loading policies&#13;
  *                     statically either inline or from URLs. Any&#13;
  *                     &lt;i&gt;PolicyIdReference&lt;/i&gt;&#13;
@@ -48,7 +48,7 @@ import org.ow2.authzforce.xmlns.pdp.ext.AbstractPolicyProvider;
  * </pre>
  * 
  * <pre>
- * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;ul xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p522200_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:p747075_="https://jakarta.ee/xml/ns/jaxb" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&lt;li&gt;&#13;
+ * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;ul xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p406479_="https://jakarta.ee/xml/ns/jaxb" xmlns:p830712_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&lt;li&gt;&#13;
  *                         If there is one and only one XACML Policy provided (e.g. one or more&#13;
  *                         &lt;i&gt;policyLocation&lt;/i&gt;&#13;
  *                         s are defined, pointing to one or more versions of the same XACML Policy), return the latest&#13;
@@ -63,7 +63,7 @@ import org.ow2.authzforce.xmlns.pdp.ext.AbstractPolicyProvider;
  * </pre>
  * 
  * <pre>
- * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;p xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p522200_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:p747075_="https://jakarta.ee/xml/ns/jaxb" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&#13;
+ * &lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;p xmlns="http://www.w3.org/1999/xhtml" xmlns:authz-ext="http://authzforce.github.io/xmlns/pdp/ext/3" xmlns:p406479_="https://jakarta.ee/xml/ns/jaxb" xmlns:p830712_="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:tns="http://authzforce.github.io/core/xmlns/pdp/8" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;&#13;
  *                     Such policy provider may call previously declared providers (in 'policyProvider' elements) to&#13;
  *                     resolve unsupported policy references, but only if they are static policy providers as well, i.e.&#13;
  *                     each implementation implements interface&#13;
